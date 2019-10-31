@@ -1,0 +1,94 @@
+/**
+ * Elements 
+*/
+
+body {
+    padding: 0 10rem;
+    /* width: 500px; */
+    margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+    body {
+        padding: 0 25rem;
+    }
+}
+
+@media (max-width: 900px) {
+    body { 
+        padding: 0;
+        border: 1px solid #EEE;
+    }
+
+    main {
+        border: none;
+    }
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #5fc9f8;
+    color: white;
+}
+
+header span:not(#contact) {
+    background-color: #147efb;
+    opacity: 0.8;
+    padding: .5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+
+    border: 1px solid #EEE;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/**
+ * Classes 
+*/
+
+.message-container {
+    width: 50%;
+}
+
+.message-container:nth-of-type(even) {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.message-container:nth-of-type(odd) {
+    align-self: flex-start;
+}
+
+.message-container:nth-of-type(even) p {
+    background: #53d769;
+}
+
+.message-container:nth-of-type(odd) p {
+    background: #ccc;
+}
+
+.message {
+    border-radius: 25px;
+    padding: .5rem 1rem;
+    width: fit-content;
+}
+
+/**
+ * IDs
+*/
+
+#contact {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
