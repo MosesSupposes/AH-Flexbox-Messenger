@@ -1,5 +1,10 @@
+/**
+ * Elements 
+*/
+
 body {
     padding: 0 10rem;
+    /* width: 500px; */
     margin: 0 auto;
 }
 
@@ -20,25 +25,17 @@ body {
     }
 }
 
-header { 
+header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: baseline;
-
+    justify-content: space-between;
+    padding: 1rem;
     background-color: #5fc9f8;
     color: white;
-    padding: 1rem;
-
 }
 
-#contact {
-    font-weight: bold;
-    font-size: 2rem;
-}
-
-span:not(#contact) {
-    background:#147efb;
+header span:not(#contact) {
+    background-color: #147efb;
     opacity: 0.8;
     padding: .5rem;
 }
@@ -46,35 +43,52 @@ span:not(#contact) {
 main {
     display: flex;
     flex-direction: column;
-}
+    /* justify-content: space-evenly; */
 
-p {
-    width: fit-content;
-}
-
-.message-container {
-    width: 40%;
+    border: 1px solid #EEE;
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 
-.message-container p {
-    border-radius: 25px;
-    padding: .5rem 1rem;
+/**
+ * Classes 
+*/
+
+.message-container {
+    width: 50%;
 }
 
 .message-container:nth-of-type(even) {
     align-self: flex-end;
     display: flex;
-    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.message-container:nth-of-type(odd) {
+    align-self: flex-start;
 }
 
 .message-container:nth-of-type(even) p {
-    background: #53d769;    
+    background: #53d769;
 }
 
 .message-container:nth-of-type(odd) p {
     background: #eee;
 }
 
+.message {
+    border-radius: 25px;
+    padding: .5rem 1rem;
+    width: fit-content;
+}
+
+/**
+ * IDs
+*/
+
+#contact {
+    font-weight: bold;
+    font-size: 2rem;
+}
 
